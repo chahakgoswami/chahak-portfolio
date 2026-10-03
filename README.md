@@ -44,3 +44,14 @@ No environment variables are required.
 3. Add screenshots/output artifacts from each repository.
 4. Convert the résumé to PDF and replace the navigation link with the PDF version.
 5. Add a custom domain when ready.
+
+## Security-patched framework versions
+
+This package has been updated for Vercel deployment with:
+
+- Next.js 15.5.27 (Maintenance LTS security release)
+- React 19.1.7
+- React DOM 19.1.7
+
+If replacing an existing GitHub repository, replace the project files and redeploy. Vercel will reinstall dependencies from package.json.
+
