@@ -55,3 +55,11 @@ This package has been updated for Vercel deployment with:
 
 If replacing an existing GitHub repository, replace the project files and redeploy. Vercel will reinstall dependencies from package.json.
 
+
+## Portfolio photos
+The site uses two local images from `public/images/`:
+
+- `public/images/chahak-london.jpg` — Home page hero image (top right)
+- `public/images/chahak-about.jpeg` — About page image
+
+Because these files are under Next.js `public/`, the code references them as `/images/chahak-london.jpg` and `/images/chahak-about.jpeg`. If you replace either photo later, keep the same filename and redeploy; no code changes are required.

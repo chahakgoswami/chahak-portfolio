@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { ArrowRight, Github, Linkedin, Mail, Sparkles } from 'lucide-react';
+import Image from 'next/image';
+import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
 import { profile, projects, skills } from '@/lib/data';
 import ProjectCard from '@/components/ProjectCard';
 
@@ -13,9 +14,14 @@ export default function Home(){return <>
     <div className="hero-actions"><Link className="button primary" href="/projects">Explore my work <ArrowRight size={18}/></Link><a className="button ghost" href={profile.resume}>View résumé</a></div>
     <div className="hero-social"><a href={profile.github} target="_blank"><Github size={17}/> GitHub</a><a href={profile.linkedin} target="_blank"><Linkedin size={17}/> LinkedIn</a><a href={`mailto:${profile.email}`}><Mail size={17}/> Email</a></div>
   </div>
-  <div className="hero-visual" aria-hidden="true">
-    <div className="orbit orbit-a"><i/><i/><i/></div><div className="orbit orbit-b"><i/><i/></div><div className="core"><Sparkles size={29}/><strong>AI</strong><small>build → test → evaluate</small></div>
-    <div className="visual-label one">reasoning</div><div className="visual-label two">retrieval</div><div className="visual-label three">tool use</div><div className="visual-label four">evaluation</div>
+  <div className="hero-photo-wrap">
+    <div className="hero-photo-glow" aria-hidden="true"/>
+    <div className="hero-photo-frame">
+      <Image src="/images/chahak-london.jpg" alt="Chahak Goswami in London with Big Ben and the Houses of Parliament in the background" fill priority sizes="(max-width: 900px) 88vw, 420px" className="hero-photo"/>
+    </div>
+    <div className="photo-chip chip-ai">Agentic AI</div>
+    <div className="photo-chip chip-trust">Trustworthy systems</div>
+    <div className="photo-caption"><span/> Chahak Goswami · AI Engineering</div>
   </div>
 </div></section>
 
